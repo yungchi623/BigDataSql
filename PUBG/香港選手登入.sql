@@ -1,0 +1,2 @@
+select user_id,username,(loginedat + interval '8h') AS loginedat,cb.serialno from memberserialno AS m left join ana.cb_user AS cb ON m.serialno = cb.serialno AND m.username::TEXT=cb.user_name 
+WHERE activity ='PUBG_ES_HK' ORDER by loginedat DESC
